@@ -1,3 +1,8 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 package model;
 
 import javax.swing.ImageIcon;
@@ -12,16 +17,16 @@ public class Supplier {
     private ProductCatalog productCatalog;
     private ImageIcon logoImage;
 
+    public Supplier() {
+        productCatalog = new ProductCatalog();
+    }
+
     public ImageIcon getLogoImage() {
         return logoImage;
     }
 
     public void setLogoImage(ImageIcon logoImage) {
         this.logoImage = logoImage;
-    }
-    
-    public Supplier() {
-        productCatalog = new ProductCatalog();
     }
 
     public String getSupplyName() {
@@ -39,9 +44,5 @@ public class Supplier {
     @Override
     public String toString() {
         return supplyName;
-    }
-
-    Object getSupplyName() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

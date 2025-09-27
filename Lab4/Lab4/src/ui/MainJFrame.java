@@ -4,6 +4,7 @@ import model.SupplierDirectory;
 import java.awt.CardLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 
 /**
  * Main JFrame for Lab 4 Application
@@ -65,21 +66,14 @@ public class MainJFrame extends JFrame {
     }
     
     public static void main(String[] args) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                try {
-                    javax.swing.UIManager.setLookAndFeel(javax.swing.UIManager.getSystemLookAndFeel());
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
+                // Removed the problematic UIManager line
                 new MainJFrame().setVisible(true);
             }
         });
     }
 }
-
-
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -108,3 +102,4 @@ public class MainJFrame extends JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
+}
