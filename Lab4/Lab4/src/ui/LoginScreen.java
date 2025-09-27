@@ -6,6 +6,7 @@ import ui.admin.AdminWorkAreaJPanel;
 import ui.supplier.SupplierWorkAreaJPanel;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
+import javax.swing.JOptionPane;
 
 /**
  * Login Screen for Lab 4 Demo
@@ -19,7 +20,6 @@ public class LoginScreen extends javax.swing.JPanel {
         this.mainWorkArea = mainWorkArea;
         this.supplierDirectory = supplierDirectory;
         initComponents();
-        populateSupplierCombo();
     }
 
     @SuppressWarnings("unchecked")
@@ -39,7 +39,8 @@ public class LoginScreen extends javax.swing.JPanel {
 
         lblChooseRole.setText("Choose Role:");
 
-        cmbRole.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrator" }));
+        // Only show Administrator and Supplier options
+        cmbRole.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrator", "Supplier" }));
 
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -85,31 +86,57 @@ public class LoginScreen extends javax.swing.JPanel {
         String selectedRole = (String) cmbRole.getSelectedItem();
         
         if ("Administrator".equals(selectedRole)) {
+            // Go directly to Admin Work Area
             AdminWorkAreaJPanel adminWorkArea = new AdminWorkAreaJPanel(mainWorkArea, supplierDirectory);
             mainWorkArea.add("AdminWorkArea", adminWorkArea);
-        } else {
-            // It's a supplier
-            Supplier selectedSupplier = (Supplier) cmbRole.getSelectedItem();
-            SupplierWorkAreaJPanel supplierWorkArea = new SupplierWorkAreaJPanel(mainWorkArea, selectedSupplier);
-            mainWorkArea.add("SupplierWorkArea", supplierWorkArea);
+            CardLayout layout = (CardLayout) mainWorkArea.getLayout();
+            layout.next(mainWorkArea);
+            
+        } else if ("Supplier".equals(selectedRole)) {
+            // Show supplier selection dialog
+            showSupplierSelection();
+        }
+    }
+    
+    private void showSupplierSelection() {
+        // Create supplier selection dialog
+        Object[] suppliers = supplierDirectory.getSupplierList().toArray();
+        
+        if (suppliers.length == 0) {
+            JOptionPane.showMessageDialog(this, 
+                "No suppliers available. Please contact administrator.", 
+                "No Suppliers", 
+                JOptionPane.WARNING_MESSAGE);
+            return;
         }
         
-        CardLayout layout = (CardLayout) mainWorkArea.getLayout();
-        layout.next(mainWorkArea);
+        Object selectedSupplier = JOptionPane.showInputDialog(
+            this,
+            "Select your supplier:",
+            "Supplier Selection",
+            JOptionPane.PLAIN_MESSAGE,
+            null,
+            suppliers,
+            suppliers[0]
+        );
+        
+        if (selectedSupplier != null) {
+            Supplier supplier = (Supplier) selectedSupplier;
+            SupplierWorkAreaJPanel supplierWorkArea = new SupplierWorkAreaJPanel(mainWorkArea, supplier);
+            mainWorkArea.add("SupplierWorkArea", supplierWorkArea);
+            CardLayout layout = (CardLayout) mainWorkArea.getLayout();
+            layout.next(mainWorkArea);
+        }
     }
 
     public void populateSupplierCombo() {
-        cmbRole.removeAllItems();
-        cmbRole.addItem("Administrator");
-        
-        for (Supplier supplier : supplierDirectory.getSupplierList()) {
-            cmbRole.addItem(supplier);
-        }
+        // This method is called when logging out, but we don't need to repopulate
+        // since we only show Administrator/Supplier options
     }
 
     // Variables declaration - do not modify
     private javax.swing.JButton btnLogin;
-    private javax.swing.JComboBox<Object> cmbRole;
+    private javax.swing.JComboBox<String> cmbRole;
     private javax.swing.JLabel lblChooseRole;
     private javax.swing.JLabel lblTitle;
     // End of variables declaration
