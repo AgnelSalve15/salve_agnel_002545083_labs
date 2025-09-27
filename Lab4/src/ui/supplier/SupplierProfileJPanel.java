@@ -24,7 +24,7 @@ import ui.admin.ManageSuppliers;
 
 /**
  *
- * @author mitra
+ * @author Agnel
  */
 public class SupplierProfileJPanel extends javax.swing.JPanel {
 

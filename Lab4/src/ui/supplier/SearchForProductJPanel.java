@@ -1,8 +1,4 @@
-/*
- * CreateProductJPanel.java
- *
- * Created on September 18, 2008, 2:54 PM
- */
+
 package ui.supplier;
 
 import model.Product;
@@ -14,7 +10,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Rushabh
+ * @author Agnel
  */
 public class SearchForProductJPanel extends javax.swing.JPanel {
 

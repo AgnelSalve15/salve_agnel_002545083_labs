@@ -1,8 +1,4 @@
-/*
- * ManageProductCatalogJPanel.java
- *
- * Created on September 24, 2008, 2:40 PM
- */
+
 package ui.supplier;
 
 import model.Product;
@@ -14,7 +10,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Rushabh
+ * @author Agnel
  */
 public class ManageProductCatalogJPanel extends javax.swing.JPanel {
 

@@ -25,7 +25,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
- * @author Rushabh
+ * @author Agnel
  */
 public class CreateNewProductJPanel extends javax.swing.JPanel {
 

@@ -1,8 +1,4 @@
-/*
- * ProductManagerWorkAreaJPanel.java
- *
- * Created on October 3, 2008, 8:06 AM
- */
+
 package ui.supplier;
 
 import model.Supplier;
@@ -13,7 +9,7 @@ import ui.LoginScreen;
 
 /**
  *
- * @author Rushabh
+ * @author Agnel
  */
 public class SupplierWorkAreaJPanel extends javax.swing.JPanel {
 

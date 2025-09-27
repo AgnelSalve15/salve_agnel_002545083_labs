@@ -14,7 +14,7 @@ import model.Feature;
 
 /**
  *
- * @author Rushabh
+ * @author Agnel
  */
 public class ViewProductDetailJPanel extends javax.swing.JPanel {
 
