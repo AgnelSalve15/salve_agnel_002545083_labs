@@ -2,17 +2,15 @@ package Business.Profiles;
 
 import Business.Person.Person;
 
-public class StudentProfile extends Profile {
+public class FacultyProfile extends Profile {
 
-    Person person;
-
-    public StudentProfile(Person p) {
+    public FacultyProfile(Person p) {
         super(p);
     }
 
     @Override
     public String getRole() {
-        return "Student";
+        return "Faculty";
     }
 
     public boolean isMatch(String id) {
