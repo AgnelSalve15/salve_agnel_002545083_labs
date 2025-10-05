@@ -134,6 +134,8 @@ public class ProfileWorkAreaMainFrame extends javax.swing.JFrame {
             FacultyWorkAreaJPanel facultyWorkArea = new FacultyWorkAreaJPanel(business, workContainer);
             workContainer.add("FacultyWorkArea", facultyWorkArea);
             ((CardLayout) workContainer.getLayout()).next(workContainer);
+        } else {
+            JOptionPane.showMessageDialog(this, "Unknown role: " + role, "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
