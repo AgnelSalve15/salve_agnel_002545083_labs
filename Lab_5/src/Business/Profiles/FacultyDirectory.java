@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class FacultyDirectory {
 
-    ArrayList<FacultyProfile> facultylist;
+    public ArrayList<FacultyProfile> facultylist;
 
     public FacultyDirectory() {
         facultylist = new ArrayList();

@@ -21,7 +21,6 @@ public class ProfileWorkAreaMainFrame extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -105,7 +104,7 @@ public class ProfileWorkAreaMainFrame extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>                        
+    }
 
     private void jButtonLoginActionPerformed(java.awt.event.ActionEvent evt) {                                             
         String userName = jTextFieldUserName.getText();
@@ -136,13 +135,13 @@ public class ProfileWorkAreaMainFrame extends javax.swing.JFrame {
             workContainer.add("FacultyWorkArea", facultyWorkArea);
             ((CardLayout) workContainer.getLayout()).next(workContainer);
         }
-    }                                            
+    }
 
     private void jButtonSignUpActionPerformed(java.awt.event.ActionEvent evt) {                                              
         StudentSignUpJPanel signUpPanel = new StudentSignUpJPanel(business, workContainer);
         workContainer.add("StudentSignUp", signUpPanel);
         ((CardLayout) workContainer.getLayout()).next(workContainer);
-    }                                             
+    }
 
     public static void main(String args[]) {
         Business business = ConfigureABusiness.initialize();
@@ -154,7 +153,6 @@ public class ProfileWorkAreaMainFrame extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify                     
     private javax.swing.JButton jButtonLogin;
     private javax.swing.JButton jButtonSignUp;
     private javax.swing.JLabel jLabel1;
@@ -163,5 +161,4 @@ public class ProfileWorkAreaMainFrame extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordField;
     private javax.swing.JTextField jTextFieldUserName;
     private javax.swing.JPanel workContainer;
-    // End of variables declaration                   
 }

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class StudentDirectory {
 
-    ArrayList<StudentProfile> studentlist;
+    public ArrayList<StudentProfile> studentlist;
 
     public StudentDirectory() {
         studentlist = new ArrayList();
