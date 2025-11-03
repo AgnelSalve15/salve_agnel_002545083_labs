@@ -7,7 +7,7 @@ package model;
 
 /**
  *
- * @author archil
+ * @author
  */
 public class Product {
 

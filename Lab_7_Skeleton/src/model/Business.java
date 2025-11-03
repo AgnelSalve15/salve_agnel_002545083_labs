@@ -6,7 +6,7 @@ package model;
 
 /**
  *
- * @author deep2
+ * @author
  */
 public class Business {
     MasterOrderList masterOrderList;
