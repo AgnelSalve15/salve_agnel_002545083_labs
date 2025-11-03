@@ -7,6 +7,8 @@ package model;
 /**
  *
  * @author
+ * 
+ * 
  */
 public class OrderItem {
     
