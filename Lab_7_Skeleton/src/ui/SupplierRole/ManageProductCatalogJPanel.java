@@ -9,7 +9,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Rushabh
+ * @author
  */
 public class ManageProductCatalogJPanel extends javax.swing.JPanel {
 

@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Mihir Mehta / Hechen Gao
+ * @author
  */
 public class SearchForProductJPanel extends javax.swing.JPanel {
 

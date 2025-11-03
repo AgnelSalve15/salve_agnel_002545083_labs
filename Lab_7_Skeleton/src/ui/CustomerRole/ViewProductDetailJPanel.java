@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Rushabh
+ * @author
  */
 public class ViewProductDetailJPanel extends javax.swing.JPanel {
     JPanel userProcessContainer;

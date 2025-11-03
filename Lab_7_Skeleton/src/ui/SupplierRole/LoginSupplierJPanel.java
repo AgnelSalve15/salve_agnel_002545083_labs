@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Mihir Mehta / Hechen Gao
+ * @author
  */
 public class LoginSupplierJPanel extends javax.swing.JPanel {
     

@@ -6,7 +6,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Mihir Mehta / Hechen Gao
+ * @author
  */
 public class SupplierWorkAreaJPanel extends javax.swing.JPanel {
 

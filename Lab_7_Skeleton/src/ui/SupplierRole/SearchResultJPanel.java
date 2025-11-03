@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Mihir Mehta / Hechen Gao
+ * @author
  */
 public class SearchResultJPanel extends javax.swing.JPanel {
 

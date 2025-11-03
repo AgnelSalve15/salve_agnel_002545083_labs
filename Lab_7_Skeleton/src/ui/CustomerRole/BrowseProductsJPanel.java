@@ -22,7 +22,7 @@ import model.Order;
 
 /**
  *
- * @author Rushabh
+ * @author
  */
 public class BrowseProductsJPanel extends javax.swing.JPanel {
     
