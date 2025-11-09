@@ -7,7 +7,7 @@ package model;
 
 /**
  *
- * @author harshalneelkamal
+ * @author
  */
 public class Comment {
     private int id;
